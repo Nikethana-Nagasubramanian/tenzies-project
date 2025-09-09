@@ -17,10 +17,21 @@ function App() {
         })
   }
 
-const [diceNumbers, setDiceNumbers] = useState(generateAllNewDice())
+  function hold(id) {
+    console.log("You clicked: " + id)
+    setDiceNumbers(oldDice => oldDice.map(num => {
+      return num.id === id ? {...num, isHeld: !num.isHeld } : num
+    }))
+  }
+
+  const [diceNumbers, setDiceNumbers] = useState(generateAllNewDice())
 
   const diceElements = diceNumbers.map((diceObject) => {
-    return <Die key={diceObject.id} value={diceObject.value} isHeld={diceObject.isHeld}/>
+    return <Die 
+            key={diceObject.id} 
+            value={diceObject.value} 
+            isHeld={diceObject.isHeld} 
+            hold={() => {hold(diceObject.id)}}/>
   })
 
   return (
