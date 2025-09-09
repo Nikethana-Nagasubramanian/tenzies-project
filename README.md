@@ -1,12 +1,7 @@
-# React + Vite
+Tenzies Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast-paced dice game built in React. Roll ten dice, holding those you want to keep, until all show the same number. Features automatic win detection, roll tracking, and interactive UI.
 
-Currently, two official plugins are available:
+Through this project, I gained hands-on experience with React state management by structuring and updating state across parent and child components. I practiced using functional programming techniques like map() to render dynamic lists, and applied useRef and useEffect to control side effects and reference DOM elements efficiently. I also improved my approach to conditional rendering for a responsive UI, and focused on making the application interface accessible to all users.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+`tenzies-app.png`
