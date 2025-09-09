@@ -70,9 +70,11 @@ button {
 
 .roll-btn {
   background-color: #5035FF;
-  width: 100px;
+  width: auto;
+  white-space: nowrap;
+  padding: 8px 20px;
   height: 50px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border: none;
   border-radius: 8px;
   color: #ffffff;
