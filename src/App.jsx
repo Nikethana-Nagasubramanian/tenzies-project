@@ -67,7 +67,11 @@ function App() {
         {gameWon && <p>Congratulations! You won! Press "New Game" to start again.</p>}
       </div>
       <h1 className="title">Tenzies</h1>
-      <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+      <ul className="instructions">
+        <li>Choose a number (eg: 5), select all the matching numbers</li>
+        <li>Continue rolling the dice, selecting matching numbers</li>
+        <li>When the board turns green, you've won!</li>
+      </ul>
         <div className='dice-container'>
           {diceElements}
         </div>
