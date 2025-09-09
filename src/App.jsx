@@ -26,6 +26,12 @@ function App() {
 
   const [diceNumbers, setDiceNumbers] = useState(generateAllNewDice())
 
+  function rollDice() {
+    setDiceNumbers(oldDice => oldDice.map(num => {
+      return num.isHeld === true ? num : {...num, value: Math.ceil(Math.random() * 6)}
+    }))
+  }
+
   const diceElements = diceNumbers.map((diceObject) => {
     return <Die 
             key={diceObject.id} 
@@ -37,10 +43,12 @@ function App() {
   return (
     <>
       <main>
+      <h1 className="title">Tenzies</h1>
+      <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
         <div className='dice-container'>
           {diceElements}
         </div>
-        <button className='roll-btn' onClick={() => setDiceNumbers(generateAllNewDice())}>Roll</button>
+        <button className='roll-btn' onClick={rollDice}>Roll</button>
       </main>
     </>
   )
